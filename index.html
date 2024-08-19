@@ -50,6 +50,7 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
             </div>
+           <div class="wave"></div> 
         </header>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
@@ -451,10 +452,53 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+            <!-- JavaScript to handle form submission -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby8DZZcLNMe0f5A9qZ_hEQ--ocjdQkEHvqEGptx-Wam6n-HI8a4Pt2qWuFqOpxXOvQX3g/exec';
+        const form = document.getElementById('contact-form');
+        const alertMessage = document.getElementById('alertMessage');
+        const alertContent = document.getElementById('alertContent');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Reset alert message
+            alertMessage.classList.add('d-none');
+            alertMessage.classList.remove('alert-primary', 'alert-danger');
+
+            // Check if all required fields are filled
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alertContent.textContent = 'Please complete all required fields!!';
+                alertMessage.classList.add('alert-danger');
+                alertMessage.classList.remove('d-none');
+                return;
+            }
+
+            // Send data if validation passes
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success response:', response); // Debug: Log the response
+                    if (response.ok) { // Check if the response status is 200
+                        alertContent.textContent = 'Thank you, your data was successfully sent!';
+                        alertMessage.classList.add('alert-primary');
+                        alertMessage.classList.remove('d-none');
+                        form.reset(); // Optional: Reset the form after successful submission
+                    } else {
+                        throw new Error('Error response from server');
+                    }
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error); // Debug: Log the error
+                    alertContent.textContent = 'Data has not been successfully sent. Please try again later.';
+                    alertMessage.classList.add('alert-danger');
+                    alertMessage.classList.remove('d-none');
+                });
+        });
+
+    </script>
     </body>
 </html>
