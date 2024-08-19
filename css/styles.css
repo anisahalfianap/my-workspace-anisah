@@ -11093,34 +11093,3 @@ html {
 .copyright {
   background-color: #1a252f;
 }
-.wave {
-  position: absolute;
-  height: 70px;
-  width: 100%;
-  background: transparent; /* Agar latar belakang tidak terlihat di sini */
-  bottom: 0;
-  left: 0;
-}
-
-.wave::before, .wave::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-}
-
-.wave::before {
-  width: 55%;
-  height: 109%;
-  background-color: #fff; /* Warna primer */
-  right: -1.5%;
-  top: 60%;
-}
-
-.wave::after {
-  width: 55%;
-  height: 100%;
-  background-color: #fff; /* Warna primer */
-  left: -1.5%;
-  top: 40%;
-}
