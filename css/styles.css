@@ -11093,3 +11093,108 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+/* existing styles */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.custom-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #1a252f;
+  z-index: 1; /* Default z-index */
+  border: 2px dashed #2c3e50; /* Dashed border */
+}
+
+/* Styling untuk gambar di dalam custom-card */
+.custom-card img {
+  width: 100%; /* Menyesuaikan lebar gambar dengan lebar card */
+  height: 300px; /* Mengatur tinggi gambar */
+  object-fit: contain; /* Menyesuaikan gambar agar seluruh bagian terlihat */
+  background-color: #f0f0f0;
+}
+
+/* Hover effect for the card */
+.custom-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Move the hovered card to the front */
+  background-color: #fff;
+}
+
+/* Default color for card title */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff; /* White color when not hovered */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Hover effect for card title */
+.custom-card:hover .card-title {
+  color: #1a252f; /* Color when hovered */
+}
+
+/* Add underline effect to the card title */
+.card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Position below the text */
+  left: 0;
+  width: 0; /* Hidden initially */
+  height: 3px; /* Thickness of the underline */
+  background-color: var(--bs-primary); /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+.custom-card:hover .card-title::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+/* Card content */
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Menghapus garis bawah pada card text yang berada di dalam elemen <a> */
+.card-container a {
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+}
+
+/* Default color for card text */
+.card-text {
+  font-size: 14px;
+  color: #ffffff; /* White color when not hovered */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Hover effect for card text */
+.custom-card:hover .card-text {
+  color: #1a252f; /* Color when hovered */
+}
+
+.highlight {
+  color: #5f27cd;
+}
