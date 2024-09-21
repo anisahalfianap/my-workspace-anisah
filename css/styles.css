@@ -11093,7 +11093,7 @@ html {
 .copyright {
   background-color: #1a252f;
 }
-/* existing styles */
+/* Styling untuk section title dan subtitle */
 .section-title {
   font-size: 36px;
   font-weight: bold;
@@ -11107,12 +11107,14 @@ html {
   margin-bottom: 40px;
 }
 
+/* Tata letak untuk card container */
 .card-container {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
+/* Gaya dasar untuk card */
 .custom-card {
   position: relative;
   border-radius: 25px;
@@ -11178,11 +11180,6 @@ html {
   text-align: center;
 }
 
-/* Menghapus garis bawah pada card text yang berada di dalam elemen <a> */
-.card-container a {
-  text-decoration: none; /* Menghapus garis bawah dari tautan */
-}
-
 /* Default color for card text */
 .card-text {
   font-size: 14px;
@@ -11195,6 +11192,41 @@ html {
   color: #1a252f; /* Color when hovered */
 }
 
-.highlight {
-  color: #5f27cd;
+/* Menghapus garis bawah pada card text yang berada di dalam elemen <a> */
+.card-container a {
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+}
+
+/* Atur tampilan untuk layar mobile */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Ubah tata letak container ke vertikal untuk mobile */
+  }
+
+  .custom-card {
+    display: flex;
+    flex-direction: row; /* Tata letak horizontal */
+    align-items: center;
+    padding: 10px;
+    height: auto; /* Ubah tinggi agar mengikuti konten */
+  }
+
+  .custom-card img {
+    width: 40%; /* Ubah lebar gambar */
+    height: auto; /* Jaga proporsi gambar */
+    object-fit: cover; /* Isi area gambar dengan proporsi yang baik */
+  }
+
+  .card-body {
+    padding: 10px;
+    text-align: left; /* Atur teks menjadi rata kiri */
+  }
+
+  .card-title {
+    font-size: 16px; /* Sesuaikan ukuran teks untuk mobile */
+  }
+
+  .card-text {
+    font-size: 12px; /* Sesuaikan ukuran teks untuk mobile */
+  }
 }
