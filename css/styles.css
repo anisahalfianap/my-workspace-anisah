@@ -11218,10 +11218,7 @@ html {
     height: 100%; /* Jaga proporsi gambar untuk mengisi tinggi card */
     object-fit: cover; /* Isi area gambar dengan proporsi yang baik */
     background-color: #f0f0f0;
-    border-top-left-radius: 25px; /* Sesuaikan dengan border-radius card */
-    border-top-right-radius: 25px; /* Sesuaikan dengan border-radius card */
-    border-bottom-left-radius: 0; /* Hindari radius di bawah gambar */
-    border-bottom-right-radius: 0; /* Hindari radius di bawah gambar */
+    border-radius: 0;
   }
 
   .card-body {
