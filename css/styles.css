@@ -11206,19 +11206,26 @@ html {
   }
 
   .custom-card {
-    display: flex;
-    flex-direction: row; /* Tata letak horizontal */
-    align-items: center;
-    padding: 10px;
-    height: auto; /* Ubah tinggi agar mengikuti konten */
-  }
-
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #1a252f;
+  z-index: 1; /* Default z-index */
+  border: 2px dashed #2c3e50; /* Dashed border */
+}
+  
   .custom-card img {
-    width: 40%; /* Ubah lebar gambar */
-    height: 100%; /* Jaga proporsi gambar untuk mengisi tinggi card */
-    object-fit: cover; /* Isi area gambar dengan proporsi yang baik */
-    border-radius: 15px; /* Berikan radius agar gambar terlihat lebih rapi */
-  }
+  width: 100%; /* Menyesuaikan lebar gambar dengan lebar card */
+  height: 300px; /* Mengatur tinggi gambar */
+  object-fit: cover; /* Menyesuaikan gambar agar seluruh bagian terlihat */
+  background-color: #f0f0f0;
+  border-top-left-radius: 25px; /* Sesuaikan dengan border-radius card */
+  border-top-right-radius: 25px; /* Sesuaikan dengan border-radius card */
+  border-bottom-left-radius: 0; /* Hindari radius di bawah gambar */
+  border-bottom-right-radius: 0; /* Hindari radius di bawah gambar */
+}
 
   .card-body {
     padding: 10px;
