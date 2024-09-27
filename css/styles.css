@@ -11093,6 +11093,7 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
 /* Styling untuk section title dan subtitle */
 .section-title {
   font-size: 36px;
@@ -11201,6 +11202,7 @@ html {
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column; /* Ubah tata letak container ke vertikal untuk mobile */
+    gap: 10px; /* Beri jarak antar kartu */
   }
 
   .custom-card {
@@ -11213,8 +11215,9 @@ html {
 
   .custom-card img {
     width: 40%; /* Ubah lebar gambar */
-    height: auto; /* Jaga proporsi gambar */
+    height: 100%; /* Jaga proporsi gambar untuk mengisi tinggi card */
     object-fit: cover; /* Isi area gambar dengan proporsi yang baik */
+    border-radius: 15px; /* Berikan radius agar gambar terlihat lebih rapi */
   }
 
   .card-body {
