@@ -11217,7 +11217,7 @@ html {
     width: 40%; /* Ubah lebar gambar */
     height: 100%; /* Jaga proporsi gambar untuk mengisi tinggi card */
     object-fit: cover; /* Isi area gambar dengan proporsi yang baik */
-    background-color: #f0f0f0;
+    background-color: var(--bs-primary);
     border-radius: 0;
   }
 
