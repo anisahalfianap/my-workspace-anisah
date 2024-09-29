@@ -11132,7 +11132,7 @@ html {
   width: 100%; /* Menyesuaikan lebar gambar dengan lebar card */
   height: 300px; /* Mengatur tinggi gambar */
   object-fit: contain; /* Menyesuaikan gambar agar seluruh bagian terlihat */
-  background-color: #f0f0f0;
+  background-color: var(--bs-primary);
 }
 
 /* Hover effect for the card */
