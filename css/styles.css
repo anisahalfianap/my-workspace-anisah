@@ -10879,6 +10879,26 @@ html {
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  transition: all 0.3s ease; /* menambahkan transisi untuk efek smooth */
+}
+
+.btn-xl:hover {
+  background-color: #045a3e; /* mengubah warna background saat hover */
+  box-shadow: 0 5px #666;
+  transform: translateY(-3px); /* memberikan sedikit efek mengangkat saat di hover */
+}
+.btn-xl:active {
+  background-color: #045a3e;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
 }
 
 .btn-social {
@@ -10896,6 +10916,7 @@ html {
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 #mainNav .navbar-brand {
   color: #fff;
