@@ -10999,11 +10999,14 @@ html {
   font-size: 1.25rem;
 }
 .masthead .masthead-avatar {
-  width: 15rem;
-  border-radius: 50%;
-  border: 8px solid;
+    width: 250px; /* Ukuran diperbesar */
+    height: 250px; /* Pastikan proporsi 1:1 */
+    object-fit: cover; /* Gambar memenuhi area tanpa distorsi */
+    border-radius: 50%; /* Bentuk lingkaran */
+    border: none !important; /* Hapus border putih */
+    display: block;
+    margin: 0 auto 2rem; /* Pusatkan dan beri jarak bawah */
 }
-
 
 @media (min-width: 992px) {
   .masthead {
