@@ -11002,26 +11002,8 @@ html {
   width: 15rem;
   border-radius: 50%;
   border: 8px solid;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-  animation: borderRotate 5s linear infinite; /* Animasi linear dan berulang */
 }
-@keyframes borderRotate {
-  0% {
-    border-color: #ff0000 #00ff00 #0000ff #ffff00; /* Warna awal: merah, hijau, biru, kuning */
-  }
-  25% {
-    border-color: #00ff00 #0000ff #ffff00 #ff0000; /* Warna bergeser */
-  }
-  50% {
-    border-color: #0000ff #ffff00 #ff0000 #00ff00; /* Warna bergeser lagi */
-  }
-  75% {
-    border-color: #ffff00 #ff0000 #00ff00 #0000ff; /* Warna bergeser lagi */
-  }
-  100% {
-    border-color: #ff0000 #00ff00 #0000ff #ffff00; /* Kembali ke warna awal */
-  }
-}
+
 
 @media (min-width: 992px) {
   .masthead {
