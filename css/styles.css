@@ -11013,6 +11013,10 @@ html {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
   }
+  .masthead .masthead-avatar {
+        width: 300px; /* Lebih besar di desktop */
+        height: 300px;
+    }
   .masthead .masthead-heading {
     font-size: 4rem;
     line-height: 3.5rem;
