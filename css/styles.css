@@ -10999,13 +10999,7 @@ html {
   font-size: 1.25rem;
 }
 .masthead .masthead-avatar {
-    width: 250px; /* Ukuran diperbesar */
-    height: 250px; /* Pastikan proporsi 1:1 */
-    object-fit: cover; /* Gambar memenuhi area tanpa distorsi */
-    border-radius: 50%; /* Bentuk lingkaran */
-    border: none !important; /* Hapus border putih */
-    display: block;
-    margin: 0 auto 2rem; /* Pusatkan dan beri jarak bawah */
+  width: 15rem;
 }
 
 @media (min-width: 992px) {
@@ -11013,10 +11007,6 @@ html {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
   }
-  .masthead .masthead-avatar {
-        width: 300px; /* Lebih besar di desktop */
-        height: 300px;
-    }
   .masthead .masthead-heading {
     font-size: 4rem;
     line-height: 3.5rem;
